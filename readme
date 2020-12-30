@@ -1,5 +1,4 @@
 <?php
-    die();
     require "class.ariomex.php";
     $api_key    = 'YOUR API KEY';
     $secret_key = 'YOUR SECRET KEY';
