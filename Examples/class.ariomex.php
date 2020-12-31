@@ -18,11 +18,11 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_ohlc';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -30,10 +30,10 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_balance';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -41,10 +41,10 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_last_price';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -52,10 +52,10 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_pair_info';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -63,11 +63,11 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_last_trades';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -75,13 +75,13 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_limit_buy';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
-                'price'     => $price ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
+                'price'         => $price ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -89,13 +89,13 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_limit_sell';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
-                'price'     => $price ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
+                'price'         => $price ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -103,12 +103,12 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_market_buy';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -116,12 +116,12 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_market_sell';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -129,14 +129,14 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_sltp';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
-                'sl_price'  => $sl_price ,
-                'tp_price'  => $tp_price ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
+                'sl_price'      => $sl_price ,
+                'tp_price'      => $tp_price ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -144,13 +144,13 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/set_sl';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'volume'    => $volume ,
-                'sl_price'  => $sl_price ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'volume'        => $volume ,
+                'sl_price'      => $sl_price ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -158,11 +158,11 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/cancel_order';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'order_id'  => $order_id ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'order_id'      => $order_id ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -170,12 +170,12 @@
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_order_info';
             $params = array (
-                'api_key'   => $this -> api_key ,
-                'signature' => $this -> signature ,
-                'nonce'     => $this -> random_string ,
-                'time'      => $this -> time ,
-                'symbol'    => $symbol ,
-                'order_id'  => $order_id ,
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+                'order_id'      => $order_id ,
             );
             return $this -> curl ( $params , $url );
         }
@@ -192,4 +192,3 @@
         }
     }
 ?>
-
