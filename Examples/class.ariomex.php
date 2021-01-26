@@ -26,6 +26,18 @@
             );
             return $this -> curl ( $params , $url );
         }
+        function get_orderbook ( $symbol ) {
+            $this -> signer ();
+            $url    = 'https://ariomex.com/api/v1/get_orderbook';
+            $params = array (
+                'api_key'       => $this -> api_key ,
+                'signature'     => $this -> signature ,
+                'random_string' => $this -> random_string ,
+                'time'          => $this -> time ,
+                'symbol'        => $symbol ,
+            );
+            return $this -> curl ( $params , $url );
+        }
         function get_balance () {
             $this -> signer ();
             $url    = 'https://ariomex.com/api/v1/get_balance';
