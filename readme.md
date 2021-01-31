@@ -16,7 +16,8 @@ Method: GET
 
 
 ```
-$url           = 'https://ariomex.com/api/v1/get_pair_info';
+$url = 'https://ariomex.com/api/v1/get_pair_info';
+echo file_get_contents ( $url );
 ```
 
 
@@ -62,7 +63,7 @@ Error:
 ```
 {
  "status": false,
- "message": "wrong api key"
+ "message": "error"
 }
 ```
 
@@ -76,7 +77,8 @@ Method: GET
 
 
 ```
-$url           = 'https://ariomex.com/api/v1/get_last_price';
+$url = 'https://ariomex.com/api/v1/get_last_price';
+echo file_get_contents ( $url );
 ```
 
 
@@ -113,7 +115,7 @@ Error:
 ```
 {
  "status": false,
- "message": "wrong api key"
+ "message": "error"
 }
 ```
 
@@ -127,7 +129,8 @@ Method: GET
 
 
 ```
-$url           = 'https://ariomex.com/api/v1/get_ohlc/btcirt';
+$url = 'https://ariomex.com/api/v1/get_ohlc/btcirt';
+echo file_get_contents ( $url );
 ```
 
 
@@ -181,7 +184,7 @@ Error:
 ```
 {
  "status": false,
- "message": "wrong api key"
+ "message": "error"
 }
 ```
 
@@ -196,7 +199,8 @@ Method: GET
 
 
 ```
-$url           = 'https://ariomex.com/api/v1/get_last_trades/btcirt';
+$url = 'https://ariomex.com/api/v1/get_last_trades/btcirt';
+echo file_get_contents ( $url );
 ```
 
 
@@ -230,7 +234,7 @@ Error:
 ```
 {
  "status": false,
- "message": "wrong api key"
+ "message": "error"
 }
 ```
 
@@ -245,7 +249,8 @@ Method: GET
 
 
 ```
-$url           = 'https://ariomex.com/api/v1/get_orderbook/btcirt';
+$url = 'https://ariomex.com/api/v1/get_orderbook/btcirt';
+echo file_get_contents ( $url );
 ```
 
 
@@ -296,7 +301,7 @@ Error:
 ```
 {
  "status": false,
- "message": "wrong api key"
+ "message": "error"
 }
 ```
 
