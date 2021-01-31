@@ -15,28 +15,12 @@
             $this -> signature     = $auth_hash = hash_hmac ( 'sha256' , $this -> random_string , $this -> api_secret );
         }
         function get_ohlc ( $symbol ) {
-            $this -> signer ();
-            $url    = 'https://ariomex.com/api/v1/get_ohlc';
-            $params = array (
-                'api_key'       => $this -> api_key ,
-                'signature'     => $this -> signature ,
-                'random_string' => $this -> random_string ,
-                'time'          => $this -> time ,
-                'symbol'        => $symbol ,
-            );
-            return $this -> curl ( $params , $url );
+            $url = 'https://ariomex.com/api/v1/get_ohlc/' . $symbol;
+            return file_get_contents ( $url );
         }
         function get_orderbook ( $symbol ) {
-            $this -> signer ();
-            $url    = 'https://ariomex.com/api/v1/get_orderbook';
-            $params = array (
-                'api_key'       => $this -> api_key ,
-                'signature'     => $this -> signature ,
-                'random_string' => $this -> random_string ,
-                'time'          => $this -> time ,
-                'symbol'        => $symbol ,
-            );
-            return $this -> curl ( $params , $url );
+            $url = 'https://ariomex.com/api/v1/get_orderbook/' . $symbol;
+            return file_get_contents ( $url );
         }
         function get_balance () {
             $this -> signer ();
@@ -50,38 +34,16 @@
             return $this -> curl ( $params , $url );
         }
         function get_last_price () {
-            $this -> signer ();
-            $url    = 'https://ariomex.com/api/v1/get_last_price';
-            $params = array (
-                'api_key'       => $this -> api_key ,
-                'signature'     => $this -> signature ,
-                'random_string' => $this -> random_string ,
-                'time'          => $this -> time ,
-            );
-            return $this -> curl ( $params , $url );
+            $url = 'https://ariomex.com/api/v1/get_last_price';
+            return file_get_contents ( $url );
         }
         function get_pair_info () {
-            $this -> signer ();
-            $url    = 'https://ariomex.com/api/v1/get_pair_info';
-            $params = array (
-                'api_key'       => $this -> api_key ,
-                'signature'     => $this -> signature ,
-                'random_string' => $this -> random_string ,
-                'time'          => $this -> time ,
-            );
-            return $this -> curl ( $params , $url );
+            $url = 'https://ariomex.com/api/v1/get_pair_info';
+            return file_get_contents ( $url );
         }
         function get_last_trades ( $symbol ) {
-            $this -> signer ();
-            $url    = 'https://ariomex.com/api/v1/get_last_trades';
-            $params = array (
-                'api_key'       => $this -> api_key ,
-                'signature'     => $this -> signature ,
-                'random_string' => $this -> random_string ,
-                'time'          => $this -> time ,
-                'symbol'        => $symbol ,
-            );
-            return $this -> curl ( $params , $url );
+            $url = 'https://ariomex.com/api/v1/get_last_trades/' . $symbol;
+            return file_get_contents ( $url );
         }
         function set_limit_buy ( $symbol , $price , $volume ) {
             $this -> signer ();
