@@ -2,17 +2,8 @@
 ---
 
 
-**Generate Signature**
+**Public API**
 ---
-
-
-
-```
-$secret_key    = 'Secret Key';
-$random_string = bin2hex(openssl_random_pseudo_bytes(16));
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-```
-
 
 **Get Pairs Information**
 ---
@@ -310,10 +301,24 @@ Error:
 ```
 
 
+
+
+**Private API**
+
+
+**Generate Signature**
+---
+```
+$secret_key    = 'Secret Key';
+$random_string = bin2hex(openssl_random_pseudo_bytes(16));
+$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
+```
+
+
 **Get Balance**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -398,7 +403,7 @@ Error:
 **Set Limit Buy Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -482,7 +487,7 @@ Error:
 **Set Limit Sell Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -566,7 +571,7 @@ Error:
 **Set Market Buy Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -646,7 +651,7 @@ Error:
 **Set Market Sell Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 | Name          | Type    | Description                               |
@@ -727,7 +732,7 @@ Error:
 **Set SLTP Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -826,7 +831,7 @@ Error:
 **Set SL Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -911,7 +916,7 @@ Error:
 **Cancel Order**
 ---
 
-
+Methode: POST
 Parameters:
 
 
@@ -980,7 +985,7 @@ Error:
 **Get Order Information**
 ---
 
-
+Methode: POST
 Parameters:
 
 
