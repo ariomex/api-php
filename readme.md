@@ -18,43 +18,14 @@ $signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
 ---
 
 
-Parameters:
-
-
-| Name          | Type    | Description             |
-|---------------|---------|-------------------------|
-| api_key       | string  | Your API Key            |
-| signature     | string  | Signature               |
-| random_string | string  | Random String           |
-| time          | integer | Timestamp (miliseconds) |
-
+Method: GET
 
 
 **Example:**
 
 
 ```
-$api_key       = 'API Key';
-$secret_key    = 'API Secret';
 $url           = 'https://ariomex.com/api/v1/get_pair_info';
-$time          = round(microtime(true) * 1000);
-$random_string = bin2hex(openssl_random_pseudo_bytes(16));
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-$params        = array (
-   'api_key'       => $api_key ,
-   'signature'     => $signature ,
-   'random_string' => $random_string ,
-   'time'          => $time ,
-);
-$query         = http_build_query ( $params );
-$ch            = curl_init ();
-curl_setopt ( $ch , CURLOPT_URL , $url );
-curl_setopt ( $ch , CURLOPT_POST , 1 );
-curl_setopt ( $ch , CURLOPT_POSTFIELDS , $query );
-curl_setopt ( $ch , CURLOPT_RETURNTRANSFER , true );
-$result = curl_exec ( $ch );
-curl_close ( $ch );
-echo $result;
 ```
 
 
@@ -108,44 +79,13 @@ Error:
 **Get Last Prices**
 ---
 
-
-Parameters:
-
-
-| Name          | Type    | Description             |
-|---------------|---------|-------------------------|
-| api_key       | string  | Your API Key            |
-| signature     | string  | Signature               |
-| random_string | string  | Random String           |
-| time          | integer | Timestamp (miliseconds) |
-
-
+Method: GET
 
 **Example:**
 
 
 ```
-$api_key       = 'API Key';
-$secret_key    = 'API Secret';
 $url           = 'https://ariomex.com/api/v1/get_last_price';
-$time          = round ( microtime ( true ) * 1000 );
-$random_string = bin2hex ( openssl_random_pseudo_bytes ( 16 ) );
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-$params        = array (
-   'api_key'       => $api_key ,
-   'signature'     => $signature ,
-   'random_string' => $random_string ,
-   'time'          => $time ,
-);
-$query = http_build_query ( $params );
-$ch    = curl_init ();
-curl_setopt ( $ch , CURLOPT_URL , $url );
-curl_setopt ( $ch , CURLOPT_POST , 1 );
-curl_setopt ( $ch , CURLOPT_POSTFIELDS , $query );
-curl_setopt ( $ch , CURLOPT_RETURNTRANSFER , true );
-$result = curl_exec ( $ch );
-curl_close ( $ch );
-echo $result;
 ```
 
 
@@ -189,48 +129,14 @@ Error:
 
 **Get Candles**
 ---
-
-
-Parameters:
-
-
-| Name          | Type    | Description              |
-|---------------|---------|--------------------------|
-| api_key       | string  | Your API Key             |
-| signature     | string  | Signature                |
-| random_string | string  | Random String            |
-| time          | integer | Timestamp (milliseconds) |
-| symbol        | string  | btcirt                   |
-
+Method: GET
 
 
 **Example:**
 
 
 ```
-$api_key       = 'API Key';
-$secret_key    = 'API Secret';
-$url           = 'https://ariomex.com/api/v1/get_ohlc';
-$time          = round ( microtime ( true ) * 1000 );
-$random_string = bin2hex ( openssl_random_pseudo_bytes ( 16 ) );
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-$symbol        = 'btcirt';
-$params        = array (
-   'api_key'       => $api_key ,
-   'signature'     => $signature ,
-   'random_string' => $random_string ,
-   'time'          => $time ,
-   'symbol'        => $symbol,
-);
-$query         = http_build_query ( $params );
-$ch            = curl_init ();
-curl_setopt ( $ch , CURLOPT_URL , $url );
-curl_setopt ( $ch , CURLOPT_POST , 1 );
-curl_setopt ( $ch , CURLOPT_POSTFIELDS , $query );
-curl_setopt ( $ch , CURLOPT_RETURNTRANSFER , true );
-$result = curl_exec ( $ch );
-curl_close ( $ch );
-echo $result;
+$url           = 'https://ariomex.com/api/v1/get_ohlc/btcirt';
 ```
 
 
@@ -292,47 +198,14 @@ Error:
 **Get Last Trades**
 ---
 
-
-Parameters:
-
-
-| Name          | Type    | Description              |
-|---------------|---------|--------------------------|
-| api_key       | string  | Your API Key             |
-| signature     | string  | Signature                |
-| random_string | string  | Random String            |
-| time          | integer | Timestamp (milliseconds) |
-| symbol        | string  | btcirt                   |
-
+Method: GET
 
 
 **Example:**
 
 
 ```
-$api_key       = 'API Key';
-$secret_key    = 'API Secret';
-$url           = 'https://ariomex.com/api/v1/get_last_trades';
-$time          = round ( microtime ( true ) * 1000 );
-$random_string = bin2hex ( openssl_random_pseudo_bytes ( 16 ) );
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-$symbol        = 'btcirt';
-$params        = array (
-   'api_key'       => $api_key ,
-   'signature'     => $signature ,
-   'random_string' => $random_string ,
-   'time'          => $time ,
-   'symbol'        => $symbol,
-);
-$query         = http_build_query ( $params );
-$ch            = curl_init ();
-curl_setopt ( $ch , CURLOPT_URL , $url );
-curl_setopt ( $ch , CURLOPT_POST , 1 );
-curl_setopt ( $ch , CURLOPT_POSTFIELDS , $query );
-curl_setopt ( $ch , CURLOPT_RETURNTRANSFER , true );
-$result = curl_exec ( $ch );
-curl_close ( $ch );
-echo $result;
+$url           = 'https://ariomex.com/api/v1/get_last_trades/btcirt';
 ```
 
 
@@ -374,47 +247,14 @@ Error:
 **Get Orderbook**
 ---
 
-
-Parameters:
-
-
-| Name          | Type    | Description              |
-|---------------|---------|--------------------------|
-| api_key       | string  | Your API Key             |
-| signature     | string  | Signature                |
-| random_string | string  | Random String            |
-| time          | integer | Timestamp (milliseconds) |
-| symbol        | string  | btcirt                   |
-
+Method: GET
 
 
 **Example:**
 
 
 ```
-$api_key       = 'API Key';
-$secret_key    = 'API Secret';
-$url           = 'https://ariomex.com/api/v1/get_orderbook';
-$time          = round ( microtime ( true ) * 1000 );
-$random_string = bin2hex ( openssl_random_pseudo_bytes ( 16 ) );
-$signature     = hash_hmac ( 'sha256' , $random_string , $secret_key );
-$symbol        = 'btcirt';
-$params        = array (
-   'api_key'       => $api_key ,
-   'signature'     => $signature ,
-   'random_string' => $random_string ,
-   'time'          => $time ,
-   'symbol'        => $symbol,
-);
-$query         = http_build_query ( $params );
-$ch            = curl_init ();
-curl_setopt ( $ch , CURLOPT_URL , $url );
-curl_setopt ( $ch , CURLOPT_POST , 1 );
-curl_setopt ( $ch , CURLOPT_POSTFIELDS , $query );
-curl_setopt ( $ch , CURLOPT_RETURNTRANSFER , true );
-$result = curl_exec ( $ch );
-curl_close ( $ch );
-echo $result;
+$url           = 'https://ariomex.com/api/v1/get_orderbook/btcirt';
 ```
 
 
