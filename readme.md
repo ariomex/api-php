@@ -120,7 +120,7 @@ Error:
 ```
 
 
-**Get Candles**
+**Get Candles 15 min**
 ---
 Method: GET
 
