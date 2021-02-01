@@ -305,6 +305,7 @@ Error:
 
 
 **Private API**
+---
 
 
 **Generate Signature**
